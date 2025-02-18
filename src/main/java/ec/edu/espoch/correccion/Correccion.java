@@ -4,6 +4,9 @@
 
 package ec.edu.espoch.correccion;
 
+import ec.edu.espoch.correccion.vista.Principal;
+
+
 /**
  *
  * @author anthony
@@ -11,6 +14,8 @@ package ec.edu.espoch.correccion;
 public class Correccion {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Principal objPrincipal=new Principal();
+        objPrincipal.setVisible(true);
     }
 }
