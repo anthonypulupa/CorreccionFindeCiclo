@@ -16,25 +16,25 @@ import ec.edu.espoch.correccion.vista.Principal;
 public class Controlador {
     
     private Principal principal;
-    private GestorProducto gestorTareas;
+    private GestorProducto gestorProducto;
     private Listar listar;
    
 
     public Controlador(Principal principal, Listar listar) {
         this.principal = principal;
         this.listar = listar;
-        this.gestorTareas = new GestorProducto();
+        this.gestorProducto = new GestorProducto();
     }
 
     public void agregarTarea() {
 
         try {
             if (this.principal != null) {
-                Producto objTarea = new Producto();
-                objTarea.setTitulo(this.principal.getTitulo());
-                objTarea.setDescripcion(this.principal.getDescripcion());
-                //sobjTarea.setEstado(this.principal.getEstado());
-                String msm = gestorTareas.agregarTarea(objTarea);
+                Producto objProducto = new Producto();
+                objProducto.setTitulo(this.principal.getTitulo());
+                objProducto.setDescripcion(this.principal.getDescripcion());
+                objProducto.setEstado(this.principal.getEstado());
+                String msm = gestorProducto.agregarTarea(objProducto);
                 principal.error(msm);
 
             } else {
@@ -50,7 +50,7 @@ public class Controlador {
         try {
             String msm = "";
             Producto[] tareas = new Producto[5];
-            tareas = gestorTareas.listarTareas();
+            tareas = gestorProducto.listarTareas();
             if (tareas != null) {
                 String lista = "";
                 for (int i = 0; i < tareas.length; i++) {

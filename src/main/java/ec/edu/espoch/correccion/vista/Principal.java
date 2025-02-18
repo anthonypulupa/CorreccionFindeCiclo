@@ -5,7 +5,7 @@
 package ec.edu.espoch.correccion.vista;
 
 import ec.edu.espoch.correccion.controlador.Controlador;
-import ec.edu.espoch.correccion.tester.TesterVista;
+
 
 
 //package ec.edu.espoch.correccion.modelo;
